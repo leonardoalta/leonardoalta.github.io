@@ -12,7 +12,7 @@ import { LanguagesComponent } from './languages/languages.component';
 import { InterestsComponent } from './interests/interests.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
-import { enviroment } '../enviroments/enviroment';
+import { environment } from  '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,8 @@ import { enviroment } '../enviroments/enviroment';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-    AngularFireModule.initializeApp(enviroment.firebaseConfig),
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent]
