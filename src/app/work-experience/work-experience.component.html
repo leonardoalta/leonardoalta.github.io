@@ -1,0 +1,62 @@
+<div
+  style="
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  "
+>
+  <h2 style="
+        margin-bottom: 15px; 
+        font-size: 1.5em; 
+        color: #333;
+      ">
+    Experiencia Laboral
+  </h2>
+
+  <ul style="list-style: none; margin: 0; padding: 0;">
+    <li
+      *ngFor="let job of workExperience"
+      style="
+        margin-bottom: 20px;
+        padding: 16px;
+        border-radius: 8px;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      "
+    >
+      <!-- Fechas y ubicación -->
+      <div style="margin-bottom: 6px; color: #666;">
+        <strong style="color: #333;">
+          {{ job.startDate }} - {{ job.endDate }}
+        </strong>
+        <span style="margin-left: 8px; font-style: italic;">
+          {{ job.location }}
+        </span>
+      </div>
+
+      <!-- Puesto -->
+      <div style="
+            margin-bottom: 4px; 
+            font-weight: bold; 
+            color: #007ACC; 
+            font-size: 1.2em;
+          ">
+        {{ job.position }}
+      </div>
+
+      <!-- Empresa -->
+      <div style="margin-bottom: 8px; color: #777;">
+        {{ job.company }}
+      </div>
+
+      <!-- Logros -->
+      <div style="color: #555;">
+        <strong style="color: #333;">Logros:</strong>
+        <br>
+        <span>{{ job.acomplishments }}</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
