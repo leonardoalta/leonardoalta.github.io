@@ -40,9 +40,12 @@
 
   <!-- Bloque Derecho: Contacto -->
   <div style="flex: 1;">
+    <!-- Aquí forzamos el salto de línea -->
     <div style="margin-bottom: 10px;">
-      <strong style="color: #2b2b2b;">Correo electrónico:</strong>
-      <span style="color: #555;">{{ header.email }}</span>
+      <strong style="color: #2b2b2b;">Correo electrónico:</strong><br />
+      <span style="color: #555; display: block; margin-top: 4px;">
+        {{ header.email }}
+      </span>
     </div>
     <div style="margin-bottom: 10px;">
       <strong style="color: #2b2b2b;">Teléfono:</strong>
