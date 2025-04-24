@@ -1,9 +1,10 @@
+# .github/workflows/pages.yml
 name: Build and Deploy Angular to GitHub Pages
 
 on:
   push:
     branches:
-      - master   # o main
+      - master   # o main, según tu rama principal
 
 permissions:
   contents: read
@@ -45,6 +46,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
+    # ← aquí indicas el environment que Pages necesita
+    environment:
+      name: github-pages
+
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+
