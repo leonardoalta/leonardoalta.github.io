@@ -49,8 +49,8 @@ jobs:
         run: docker run -d --name http_base httpd:2.4-alpine
 
       # 8) Copy build output into the container
-      - name: Copy docs into container
-        run: docker cp docs/. http_base:/usr/local/apache2/htdocs
+      - name: Copy build output into the container
+        run: docker cp docs/browser/. http_base:/usr/local/apache2/htdocs
 
       # 9) Commit container as a new image tagged :latest
       - name: Build custom Docker image
